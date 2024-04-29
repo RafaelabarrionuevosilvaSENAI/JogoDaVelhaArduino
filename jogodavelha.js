@@ -34,16 +34,16 @@
     // Anotar/registrar a jogada, do primeiro jogador.
     velha = 1;
     do {
-        window.alert(tabuleiro[0].ToString() + tabuleiro[1] + tabuleiro[2]);
-        window.alert(tabuleiro[3].ToString() + tabuleiro[4] + tabuleiro[5]);
-        window.alert(tabuleiro[6].ToString() + tabuleiro[7] + tabuleiro[8]);
+        console.log(tabuleiro[0].ToString() + tabuleiro[1] + tabuleiro[2]);
+        console.log(tabuleiro[3].ToString() + tabuleiro[4] + tabuleiro[5]);
+        console.log(tabuleiro[6].ToString() + tabuleiro[7] + tabuleiro[8]);
         jogada = "";
-        window.alert("Digite a posição de sua peça JOGADOR" + jogadordavez);
+        console.log("Digite a posição de sua peça JOGADOR" + jogadordavez);
         jogada = window.prompt('Enter a value for jogada');
         if (validaPosicao(jogada)) {
             linha = parseInt(jogada.charAt(0));
             coluna = parseInt(jogada.charAt(2));
-            window.alert("Linha: " + linha + "; Coluna: " + coluna);
+            console.log("Linha: " + linha + "; Coluna: " + coluna);
 
             // Verificar se a posição "jogada" é valida.
             // Convencer a jogada texto em dois inteiros linha e coluna.
@@ -55,19 +55,19 @@
                 // Verificar o tabuleiro, se houve ganhador ou empate, finalizar o jogo.
                 if (tabuleiro[0] == jogadordavez && tabuleiro[1] == jogadordavez && tabuleiro[2] == jogadordavez || tabuleiro[3] == jogadordavez && tabuleiro[4] == jogadordavez && tabuleiro[5] == jogadordavez || tabuleiro[6] == 1 && tabuleiro[7] == jogadordavez && tabuleiro[8] == jogadordavez) {
                     haVencedor = true;
-                    window.alert("vencedor: jogador " + jogadordavez);
+                    console.log("vencedor: jogador " + jogadordavez);
                 } else {
 
                     // Verificar a jogada vencedoras nas linhas
                     if (tabuleiro[0] == jogadordavez && tabuleiro[3] == jogadordavez && tabuleiro[6] == jogadordavez || tabuleiro[1] == jogadordavez && tabuleiro[4] == jogadordavez && tabuleiro[7] == jogadordavez || tabuleiro[2] == jogadordavez && tabuleiro[5] == jogadordavez && tabuleiro[8] == jogadordavez) {
                         haVencedor = true;
-                        window.alert("vencedor: jogador " + jogadordavez);
+                        console.log("vencedor: jogador " + jogadordavez);
                     } else {
 
                         // Verificar a jogada vencedoras nas colunas
                         if (tabuleiro[0] == jogadordavez && tabuleiro[4] == jogadordavez && tabuleiro[8] == jogadordavez || tabuleiro[2] == jogadordavez && tabuleiro[4] == jogadordavez && tabuleiro[6] == jogadordavez) {
                             haVencedor = true;
-                            window.alert("vencedor: jogador " + jogadordavez);
+                            console.log("vencedor: jogador " + jogadordavez);
                         } else {
 
                             // Verificar a jogada vencedoras nas diagonais
@@ -83,12 +83,12 @@
 
                 // Trocar de jogador
             } else {
-                window.alert("posição ocupada, por favor jogue novamente!");
+                console.log("posição ocupada, por favor jogue novamente!");
 
                 // Informar ao jogador 1 que a posição está preenchuda, é inválida e ele precisa informar uma posição válida
             }
         } else {
-            window.alert("Jogada invalida");
+            console.log("Jogada invalida");
         }
 
         // Verificar a jogada vencedora nas linhas
@@ -96,13 +96,13 @@
 
     // Verificar o tabuleiro, se houve ganhador ou empate, finalizar o jogo.
     if (haVencedor) {
-        window.alert("parabens pela sua vitoria jogador" + jogadordavez);
+        console.log("parabens pela sua vitoria jogador" + jogadordavez);
     } else {
-        window.alert("seu jogo deu velha!");
+        console.log("seu jogo deu velha!");
     }
-    window.alert(tabuleiro[0].ToString() + tabuleiro[1] + tabuleiro[2]);
-    window.alert(tabuleiro[3].ToString() + tabuleiro[4] + tabuleiro[5]);
-    window.alert(tabuleiro[6].ToString() + tabuleiro[7] + tabuleiro[8]);
+    console.log(tabuleiro[0].ToString() + tabuleiro[1] + tabuleiro[2]);
+    console.log(tabuleiro[3].ToString() + tabuleiro[4] + tabuleiro[5]);
+    console.log(tabuleiro[6].ToString() + tabuleiro[7] + tabuleiro[8]);
 }
 
 function principal() {
@@ -110,7 +110,7 @@ function principal() {
     var x;
     var y;
 
-    window.alert("somaTotal: ");
+    console.log("somaTotal: ");
 }
 
 function soma(x, y) {
@@ -137,7 +137,7 @@ function validaPosicao(entrada) {
     var entradaValida;
 
     entradaValida = false;
-    window.alert(entrada.length());
+    console.log(entrada.length());
     if (entrada.length() == 3) {
         if (entrada.charAt(0) == "0" || entrada.charAt(0) == "1" || entrada.charAt(0) == "2") {
             if (entrada.charAt(2) == "0" || entrada.charAt(2) == "1" || entrada.charAt(2) == "2") {
