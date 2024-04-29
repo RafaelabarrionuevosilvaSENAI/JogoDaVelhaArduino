@@ -1,6 +1,8 @@
 # JogoDaVelhaArduino
 
-**Autora:** Rafaela Barrionuevo Silva
+## **Autora:** Rafaela Barrionuevo Silva
+
+## **data:** 29/04/2024
 
 ### nome do projeto: 
 jogo da velha no arduino
